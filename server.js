@@ -14,22 +14,21 @@ app.use(express.urlencoded({extended: true})); // yozmasak HTML FORMdan kelgan n
 
 // 2: Sessionga boglik hozircha qilmaymiz
 
-// 3: View code
+// 3: View code SSR orqali
 
 app.set("views", "views");
 app.set("view engine", "ejs");
 
 // 4: Routing codes
+app.post("/create-item", (req,res) =>{
+    console.log(req);
+    res.json({test: "sucsess"})
+})
 
-app.get("/hello", function(req, res){
-    //res.end(`<h1>Hello World</h1>`);
-    res.send(`<h1>Hello World</h1>`);
+app.get("/", function(req, res){
+    res.render("harid");
 });
 
-app.get("/gift", function(req, res){
-    //res.end(`<h1>You are in gift page</h1>`);
-    res.send(`<h1>You are in gift page</h1>`);
-});
 
 const server = http.createServer(app);
 let PORT = 3000;

@@ -22,10 +22,12 @@ app.set("view engine", "ejs");
 // 4: Routing codes
 
 app.get("/hello", function(req, res){
+    //res.end(`<h1>Hello World</h1>`);
     res.send(`<h1>Hello World</h1>`);
 });
 
 app.get("/gift", function(req, res){
+    //res.end(`<h1>You are in gift page</h1>`);
     res.send(`<h1>You are in gift page</h1>`);
 });
 

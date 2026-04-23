@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/main.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" />
+    <script src="//maxcdn.bootstrapcdn.com/bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>Portfolio</title>
+</head>
+
+<body>
+    <div class="frame">
+        <div class="main_frame">
+
+            <!-- LEFT FRAME -->
+            <div class="left_frame">
+
+                <div class="left_1">
+                    <div class="profile_pic">
+                        <img src="images/Profile.png" width="156" height="135" alt="">
+                    </div>
+
+                    <div class="my_name">
+                        <%= user.name %>
+                    </div>
+
+                    <div class="profession">
+                        <%= user.profession %>
+                    </div>
+
+                    <div class="icons">
+                        <i class="fa-brands fa-facebook" style="color: rgb(255, 180, 0);"></i>
+                        <i class="fa-brands fa-instagram" style="color: rgb(255, 180, 0);"></i>
+                        <i class="fa-brands fa-twitter" style="color: rgb(255, 180, 0);"></i>
+                        <i class="fa-brands fa-linkedin-in" style="color: rgb(255, 180, 0);"></i>
+                        <i class="fa-brands fa-youtube" style="color: rgb(255, 180, 0);"></i>
+                        <i class="fa-brands fa-square-dribbble" style="color: rgb(255, 180, 0);"></i>
+                    </div>
+                    
+                </div>
+
+                <div class="marginer"></div>
+
+                <!-- ABOUT -->
+                <div class="about">
+                    <div class="info_row">
+                        <span class="key1">Age:</span>
+                        <span class="value"><%= user.age %></span>
+                    </div>
+
+                    <div class="info_row">
+                        <span class="key1">Residence:</span>
+                        <span class="value"><%= user.residence %></span>
+                    </div>
+
+                    <div class="info_row">
+                        <span class="key1">Freelance:</span>
+                        <span class="value available"><%= user.freelance %></span>
+                    </div>
+
+                    <div class="info_row">
+                        <span class="key1">Address:</span>
+                        <span class="value"><%= user.address %></span>
+                    </div>
+                </div>
+
+                <div class="marginer"></div>
+
+                <!-- LANGUAGES -->
+                <div class="languages">
+    <div class="themes">Languages</div>
+
+    <div class="lang_item">
+        <div class="paragraph_letters">
+            <span><%=user.languages[0]%></span> 
+            <span>100%</span>
+        </div>
+        <div class="percentage">
+           <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="217" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+    </div>
+
+    <div class="lang_item">
+        <div class="paragraph_letters">
+            <span><%=user.languages[1]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+           <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="208" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+    </div>
+
+    <div class="lang_item">
+        <div class="paragraph_letters">
+            <span><%=user.languages[2]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+  <rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+  <rect x="1.5" y="1.5" width="208" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+    </div>
+</div>
+
+                <div class="marginer"></div>
+
+                <!-- SKILLS -->
+                <div class="skills">
+                    <div class="themes">Skills</div>
+                        <div class="skill_item">
+                             <div class="paragraph_letters">
+            <span><%=user.skills[0]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="209" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+                        </div>
+                        <div class="skill_item">
+                             <div class="paragraph_letters">
+            <span><%=user.skills[1]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="209" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+                        </div>
+                        <div class="skill_item">
+                             <div class="paragraph_letters">
+            <span><%=user.skills[2]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="209" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+                        </div>
+                        <div class="skill_item">
+                             <div class="paragraph_letters">
+            <span><%=user.skills[3]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="209" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+                        </div>
+                        <div class="skill_item">
+                             <div class="paragraph_letters">
+            <span><%=user.skills[4]%></span> 
+            <span>80%</span>
+        </div>
+        <div class="percentage">
+            <svg xmlns="http://www.w3.org/2000/svg" width="220" height="5" viewBox="0 0 221 5" fill="none">
+<rect x="0.25" y="0.25" width="220.5" height="4.5" rx="2.25" stroke="#FFB400" stroke-width="0.5"/>
+<rect x="1.5" y="1.5" width="209" height="2" rx="1" fill="#FFB400"/>
+</svg>
+        </div>
+                        </div>
+                    
+                </div>
+
+                <div class="marginer"></div>
+
+                <!-- EXTRA SKILLS -->
+                <div class="extra_skills">
+                     <div class="themes">Extra skills</div>
+                     <div class="extra_item">
+                        <div class="paragraph_letters">
+                            <span>
+                               <svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 15 15" fill="none">
+<rect x="0.5" y="0.5" width="9" height="9" stroke="#FFB400"/>
+<rect x="5.5" y="5.5" width="9" height="9" stroke="#FFB400"/>
+</svg> 
+                            </span> <span>hello</span></div>
+                     </div>
+                </div>
+                  
+                <div class="marginer"></div>
+
+            </div>
+
+            <!-- MIDDLE FRAME -->
+            <div class="mid_frame">
+
+                <div class="mid_top"></div>
+
+                <div class="mid_buttom">
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                    <div class="mini_groups">
+                        <div class="mid_buttom-icons"></div>
+                        <div class="mid_buttom-text1"></div>
+                        <div class="mid_buttom-text2"></div>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- RIGHT FRAME -->
+            <div class="right_frame">
+                <div class="icons"></div>
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>
+

@@ -463,6 +463,7 @@
     margin-left: 583.3px;
 }
 
+/* shapes in middle up with absolute position */
 
 .middUp_frame .shapes_1 {
     position: absolute;
@@ -536,6 +537,8 @@
     margin-bottom: 14.63px;
     margin-left: 917.96px;
 }
+
+/* mid pasgi tomoni boslandi */
 
 .midd_frame .middDown_frame {
     width: 970px;

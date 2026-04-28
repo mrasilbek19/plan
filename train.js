@@ -1,33 +1,95 @@
-//console.log("train ishga tushdi");
+console.log("train ishga tushdi");
 
-//----------------> Asynchronous functions in Js <----------------------------
 
-console.log("Jack Ma maslahatlari");
 
-const list = [
-    "Yahshi talaba buling", // 0-20 yoshgacha
-    "tugri boshliq tanlang va kuproq hato qiling",// 20-30 yoshgacha
-    "uzingizga ishlashingizni boshlang",//30-40 yoshgacha
-    "siz kuchli bulgan narsalarni qiling",// 40-50 yoshgacha
-    "yoshlarga investitsiya qiling",// 50-60 yoshgacha
-    "endi dam oling, foidasi yuq endi",// 60 dan kup
-];
+//TASK B
 
-async function maslahatBering(a) {
-    if (typeof a !== "number") throw new Error("insert a number");
-    else if (a <= 20) return list[0];
-    else if (a > 20 && a <= 30) return list[1];
-    else if (a > 30 && a <= 40) return list[2];
-    else if (a > 40 && a <= 50) return list[3];
-    else if (a > 50 && a <= 60) return list[4];
-    else {
-        return new Promise((resolve, reject) => { //Promise bilan setTimeoutlar ishlaydi keginchalik tulliq urganib chiqamiz
-            setInterval(() => {
-                resolve(list[5]); //resolve called only one time 
-            }, 2000);
-        });
+function countDigits(a) {
+    let count = 0;
+
+    for(let i = 0; i < a.length; i++){
+        if(a[i] >= "0" && a[i] <= "9"){
+            count++;
+        }
     }
+
+    return count;
 }
+
+const result = countDigits("ad2a54y79w6768eedr3frg4et0sfgb9")
+console.log("result is: ", result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// //----------------> Asynchronous functions in Js <----------------------------
+
+// console.log("Jack Ma maslahatlari");
+
+// const list = [
+//     "Yahshi talaba buling", // 0-20 yoshgacha
+//     "tugri boshliq tanlang va kuproq hato qiling",// 20-30 yoshgacha
+//     "uzingizga ishlashingizni boshlang",//30-40 yoshgacha
+//     "siz kuchli bulgan narsalarni qiling",// 40-50 yoshgacha
+//     "yoshlarga investitsiya qiling",// 50-60 yoshgacha
+//     "endi dam oling, foidasi yuq endi",// 60 dan kup
+// ];
+
+// async function maslahatBering(a) {
+//     if (typeof a !== "number") throw new Error("insert a number");
+//     else if (a <= 20) return list[0];
+//     else if (a > 20 && a <= 30) return list[1];
+//     else if (a > 30 && a <= 40) return list[2];
+//     else if (a > 40 && a <= 50) return list[3];
+//     else if (a > 50 && a <= 60) return list[4];
+//     else {
+//         return new Promise((resolve, reject) => { //Promise bilan setTimeoutlar ishlaydi keginchalik tulliq urganib chiqamiz
+//             setInterval(() => {
+//                 resolve(list[5]); //resolve called only one time 
+//             }, 2000);
+//         });
+//     }
+// }
 
 
 // console.log("passad here 0");
@@ -41,16 +103,16 @@ async function maslahatBering(a) {
 // console.log("passad here 1");
 //asinc and await
 
-async function run() {
-    let javob = await maslahatBering(79); // await -- kutib tur kerakli malumot kelmagincha ishlama 
-    console.log(javob);
-    // javob = await maslahatBering(31);
-    // console.log(javob);
-    // javob = await maslahatBering(41);
-    // console.log(javob);
-}
+// async function run() {
+//     let javob = await maslahatBering(79); // await -- kutib tur kerakli malumot kelmagincha ishlama 
+//     console.log(javob);
+//     // javob = await maslahatBering(31);
+//     // console.log(javob);
+//     // javob = await maslahatBering(41);
+//     // console.log(javob);
+// }
 
-run();
+// run();
 
 
 

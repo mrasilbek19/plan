@@ -1,63 +1,113 @@
 console.log("train ishga tushdi");
 
 
+// Task C
+
+const moment = require("moment");
+
+class Shop{
+    #non;
+    #lagmon;
+    #cola;
+
+    constructor(non, lagmon, cola){
+        this.#non = non;
+        this.#lagmon = lagmon;
+        this.#cola = cola;
+    }
+
+    time(){
+        return moment().format("HH:mm:ss");
+    }
+
+    qoldiq(){
+        console.log(`Hozir ${this.time()}'da ${this.#non}ta non, ${this.#lagmon}ta lag'mon va ${this.#cola}ta cola mavjud`);
+    }
+
+    sotish(name, number){
+    if(name === "non"){
+        this.#non -= number;
+    }else if(name === "lagmon"){
+        this.#lagmon -= number;
+    }else if(name === "cola"){
+        this.#cola -= number;
+    }else return console.log("Bunaqa mahsulot hozircha sotilmaydi!")
+    
+    console.log(`${name} ${number} dona sotildi`);
+    
+}
+
+    qabul(name, number){
+    if(name === "non"){
+        this.#non += number;
+    }else if(name === "lagmon"){
+        this.#lagmon += number;
+    }else if(name === "cola"){
+        this.#cola += number;
+    }else return console.log("Bu mahsulot Qabul qilinmaydi!")
+    
+
+    console.log(`${name} ${number} dona qabul qilindi`);
+    };
+}
+
+
+const s1 = new Shop(4, 8, 9)
+
+s1.qoldiq();
+s1.sotish("non", 3);
+s1.qoldiq();
+s1.sotish("pepsi", 5);
+s1.sotish("cola", 5);
+s1.qabul("non", 25);
+s1.qoldiq();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 //TASK B
 
-function countDigits(a) {
-    let count = 0;
+// function countDigits(a) {
+//     let count = 0;
 
-    for(let i = 0; i < a.length; i++){
-        if(a[i] >= "0" && a[i] <= "9"){
-            count++;
-        }
-    }
+//     for(let i = 0; i < a.length; i++){
+//         if(a[i] >= "0" && a[i] <= "9"){
+//             count++;
+//         }
+//     }
 
-    return count;
-}
+//     return count;
+// }
 
-const result = countDigits("ad2a54y79w6768eedr3frg4et0sfgb9")
-console.log("result is: ", result)
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+// const result = countDigits("ad2a54y79w6768eedr3frg4et0sfgb9")
+// console.log("result is: ", result);
 
 
 

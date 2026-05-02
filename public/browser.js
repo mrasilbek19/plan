@@ -35,3 +35,28 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
             console.log("Try again!");
         });
 });
+
+document.addEventListener("click", function(e){
+    //console.log(e)
+
+
+    //delete operations
+    if(e.target.classList.contains("delete-me")){
+        if(confirm("Are you sure?")){
+        axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
+        .then((response) => {
+            console.log(response.data);
+            e.target.parentElement.parentElement.remove();
+        })
+        .catch((err) => {
+        console.log("Try again!");
+        });
+        } 
+    }
+
+
+    //edit operations
+    if(e.target.classList.contains("edit-me")){
+        alert("You pressed Make Change button!")
+    }
+});

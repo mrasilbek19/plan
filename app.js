@@ -31,12 +31,8 @@ app.post("/create-item", (req,res) =>{
    console.log("user entered to /create-item");
    const new_reja = req.body.reja;
    db.collection("plans").insertOne({reja: new_reja} , (err, data)=>{
-    if(err){
-        console.log(err);
-        res.end('somethind went wrong');
-    }else{
-     res.end('successfully added')
-    }
+   console.log(data.ops)
+   res.json(data.ops[0]);
    });
 });
 

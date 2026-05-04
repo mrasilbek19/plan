@@ -1,5 +1,4 @@
-console.log("browser js isha tushdi");
-
+console.log("browser js ishga tushdi");
 
 function itemTemplate(item) {
     return `<li class="list-group-item list-group-item-info d-flex align-items-center justify-content-between">
@@ -24,39 +23,64 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
     e.preventDefault();
 
     axios.post("/create-item", { reja: createField.value })
-    
-    .then((response) => {
-        document.getElementById("item-list").insertAdjacentHTML("beforeend", itemTemplate(response.data));
-        createField.value = "";
-        createField.focus();
-    })
-        
-    .catch((err) => {
+
+        .then((response) => {
+            document.getElementById("item-list")
+            .insertAdjacentHTML("beforeend", itemTemplate(response.data));
+            createField.value = "";
+            createField.focus();
+        })
+
+        .catch((err) => {
             console.log("Try again!");
         });
 });
 
-document.addEventListener("click", function(e){
+document.addEventListener("click", function (e) {
     //console.log(e)
 
-
     //delete operations
-    if(e.target.classList.contains("delete-me")){
-        if(confirm("Are you sure?")){
-        axios.post("/delete-item", {id: e.target.getAttribute("data-id")})
-        .then((response) => {
-            console.log(response.data);
-            e.target.parentElement.parentElement.remove();
-        })
-        .catch((err) => {
-        console.log("Try again!");
-        });
-        } 
+    if (e.target.classList.contains("delete-me")) {
+        if (confirm("Are you sure?")) {
+            axios.post("/delete-item", { id: e.target.getAttribute("data-id") })
+                .then((response) => {
+                    console.log(response.data);
+                    e.target.parentElement.parentElement.remove();
+                })
+                .catch((err) => {
+                    console.log("Try again!");
+                });
+        }
     }
 
 
     //edit operations
-    if(e.target.classList.contains("edit-me")){
-        alert("You pressed Make Change button!")
+    if (e.target.classList.contains("edit-me")) {
+        let userInput = prompt("Enter your changes!", 
+            e.target.parentElement.parentElement
+            .querySelector(".item-text").innerText)
+
+        if (userInput) {
+            axios.post("/edit-item", {
+                id: e.target.getAttribute("data-id"),
+                new_input: userInput,
+            }).then(response => {
+                e.target
+                .parentElement.parentElement
+                .querySelector(".item-text").innerText = userInput;
+            }).catch(err => {
+                console.log("Try again!");
+            });
+        }
     }
 });
+
+document.getElementById("clean-all").addEventListener("click", function(){
+    axios.post("/delete-all", {delete_all: true})
+    .then(response => {
+       alert(response.data.state);
+       document.location.reload();
+    }).catch(err => {
+       console.log("Try again!");
+    })
+})

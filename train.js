@@ -1,66 +1,119 @@
 console.log("train ishga tushdi");
 
 
-// Task C
 
-const moment = require("moment");
-
-class Shop{
-    #non;
-    #lagmon;
-    #cola;
-
-    constructor(non, lagmon, cola){
-        this.#non = non;
-        this.#lagmon = lagmon;
-        this.#cola = cola;
+function compareWords(st1, st2) {
+     
+   if(st1.length !== st2.length){
+        return false;
     }
-
-    time(){
-        return moment().format("HH:mm:ss");
-    }
-
-    qoldiq(){
-        console.log(`Hozir ${this.time()}'da ${this.#non}ta non, ${this.#lagmon}ta lag'mon va ${this.#cola}ta cola mavjud`);
-    }
-
-    sotish(name, number){
-    if(name === "non"){
-        this.#non -= number;
-    }else if(name === "lagmon"){
-        this.#lagmon -= number;
-    }else if(name === "cola"){
-        this.#cola -= number;
-    }else return console.log("Bunaqa mahsulot hozircha sotilmaydi!")
-    
-    console.log(`${name} ${number} dona sotildi`);
-    
-}
-
-    qabul(name, number){
-    if(name === "non"){
-        this.#non += number;
-    }else if(name === "lagmon"){
-        this.#lagmon += number;
-    }else if(name === "cola"){
-        this.#cola += number;
-    }else return console.log("Bu mahsulot Qabul qilinmaydi!")
-    
-
-    console.log(`${name} ${number} dona qabul qilindi`);
-    };
+   
+   const word1 = st1.toLowerCase().split("").sort().join("");
+   const word2 = st2.toLowerCase().split("").sort().join("");
+   
+   if(word1 === word2){
+    return true;
+   }else 
+    return false;
+  
 }
 
 
-const s1 = new Shop(4, 8, 9)
+console.log(compareWords("mitgroup", "gmtiprou"));
+console.log(compareWords("bmw", "wbm"));      
+console.log(compareWords("fast", "stffa"));
+console.log(compareWords("hello", "world")); 
 
-s1.qoldiq();
-s1.sotish("non", 3);
-s1.qoldiq();
-s1.sotish("pepsi", 5);
-s1.sotish("cola", 5);
-s1.qabul("non", 25);
-s1.qoldiq();
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// // Task C
+
+// const moment = require("moment");
+
+// class Shop{
+//     #non;
+//     #lagmon;
+//     #cola;
+
+//     constructor(non, lagmon, cola){
+//         this.#non = non;
+//         this.#lagmon = lagmon;
+//         this.#cola = cola;
+//     }
+
+//     time(){
+//         return moment().format("HH:mm:ss");
+//     }
+
+//     qoldiq(){
+//         console.log(`Hozir ${this.time()}'da ${this.#non}ta non, ${this.#lagmon}ta lag'mon va ${this.#cola}ta cola mavjud`);
+//     }
+
+//     sotish(name, number){
+//     if(name === "non"){
+//         this.#non -= number;
+//     }else if(name === "lagmon"){
+//         this.#lagmon -= number;
+//     }else if(name === "cola"){
+//         this.#cola -= number;
+//     }else return console.log("Bunaqa mahsulot hozircha sotilmaydi!")
+    
+//     console.log(`${name} ${number} dona sotildi`);
+    
+// }
+
+//     qabul(name, number){
+//     if(name === "non"){
+//         this.#non += number;
+//     }else if(name === "lagmon"){
+//         this.#lagmon += number;
+//     }else if(name === "cola"){
+//         this.#cola += number;
+//     }else return console.log("Bu mahsulot Qabul qilinmaydi!")
+    
+
+//     console.log(`${name} ${number} dona qabul qilindi`);
+//     };
+// }
+
+
+// const s1 = new Shop(4, 8, 9)
+
+// s1.qoldiq();
+// s1.sotish("non", 3);
+// s1.qoldiq();
+// s1.sotish("pepsi", 5);
+// s1.sotish("cola", 5);
+// s1.qabul("non", 25);
+// s1.qoldiq();
 
 
 

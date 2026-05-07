@@ -37,7 +37,7 @@ document.getElementById("create-form").addEventListener("submit", function (e) {
 });
 
 document.addEventListener("click", function (e) {
-    //console.log(e)
+    console.log(e)
 
     //delete operations
     if (e.target.classList.contains("delete-me")) {
@@ -58,13 +58,14 @@ document.addEventListener("click", function (e) {
     if (e.target.classList.contains("edit-me")) {
         let userInput = prompt("Enter your changes!", 
             e.target.parentElement.parentElement
-            .querySelector(".item-text").innerText)
+            .querySelector(".item-text").innerText);
 
         if (userInput) {
             axios.post("/edit-item", {
                 id: e.target.getAttribute("data-id"),
                 new_input: userInput,
             }).then(response => {
+                console.log(response.data);
                 e.target
                 .parentElement.parentElement
                 .querySelector(".item-text").innerText = userInput;

@@ -2,27 +2,52 @@ console.log("train ishga tushdi");
 
 
 
-function compareWords(st1, st2) {
-     
-   if(st1.length !== st2.length){
-        return false;
-    }
+
+function getReverse(word) {
    
-   const word1 = st1.toLowerCase().split("").sort().join("");
-   const word2 = st2.toLowerCase().split("").sort().join("");
+   const reversed = word.toLowerCase().split("").reverse().join("");
    
-   if(word1 === word2){
-    return true;
-   }else 
-    return false;
-  
+   console.log(reversed)
+   return reversed;
 }
 
 
-console.log(compareWords("mitgroup", "gmtiprou"));
-console.log(compareWords("bmw", "wbm"));      
-console.log(compareWords("fast", "stffa"));
-console.log(compareWords("hello", "world")); 
+getReverse("hello");
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// function compareWords(st1, st2) {
+     
+//    if(st1.length !== st2.length){
+//         return false;
+//     }
+   
+//    const word1 = st1.toLowerCase().split("").sort().join("");
+//    const word2 = st2.toLowerCase().split("").sort().join("");
+   
+//    return word1 === word2
+   
+// }
+
+
+// console.log(compareWords("mitgroup", "gmtiprou"));
+// console.log(compareWords("bmw", "wbm"));      
+// console.log(compareWords("fast", "stffa"));
+// console.log(compareWords("hello", "world")); 
 
 
 

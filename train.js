@@ -1,18 +1,44 @@
 console.log("train ishga tushdi");
 
 
-
-
-function getReverse(word) {
+// MITASK F
+function findDoublers(word) {
    
-   const reversed = word.toLowerCase().split("").reverse().join("");
+   const wordL = word.toLowerCase();
+
+   for(let i = 0; i < wordL.length; i++){
+      for(let j = i + 1; j < wordL.length; j++){
+         if(wordL[i] === wordL[j]){
+            return true;
+         }
+      }
+   }
    
-   console.log(reversed)
-   return reversed;
+   return false;
 }
 
+console.log(findDoublers("MIT"));
+console.log(findDoublers("Hello"));
+console.log(findDoublers("Nodemon"));
+console.log(findDoublers("qwerty"));
 
-getReverse("hello");
+
+
+
+
+
+
+
+// function getReverse(word) {
+   
+//    const reversed = word.toLowerCase().split("").reverse().join("");
+   
+//    console.log(reversed)
+//    return reversed;
+// }
+
+
+// getReverse("hello");
 
 
 

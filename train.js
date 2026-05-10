@@ -1,26 +1,55 @@
 console.log("train ishga tushdi");
 
 
-// MITASK F
-function findDoublers(word) {
-   
-   const wordL = word.toLowerCase();
-
-   for(let i = 0; i < wordL.length; i++){
-      for(let j = i + 1; j < wordL.length; j++){
-         if(wordL[i] === wordL[j]){
-            return true;
-         }
+function getHighestIndex(arr){
+   let max = arr[0]
+   for(let i = 1; i < arr.length; i++){
+      if(max < arr[i]){
+         max = arr[i]
       }
    }
-   
-   return false;
+
+   console.log(`Max value is ${max}`)
+   return arr.indexOf(max)
+   //return max
 }
 
-console.log(findDoublers("MIT"));
-console.log(findDoublers("Hello"));
-console.log(findDoublers("Nodemon"));
-console.log(findDoublers("qwerty"));
+const arr1 = [5, 1521, 312, 21, 8999, 90, 2233]
+const result = getHighestIndex(arr1)
+console.log(result);
+
+
+
+
+
+
+
+
+
+
+
+
+
+// MITASK F
+// function findDoublers(word) {
+   
+//    const wordL = word.toLowerCase();
+
+//    for(let i = 0; i < wordL.length; i++){
+//       for(let j = i + 1; j < wordL.length; j++){
+//          if(wordL[i] === wordL[j]){
+//             return true;
+//          }
+//       }
+//    }
+   
+//    return false;
+// }
+
+// console.log(findDoublers("MIT"));
+// console.log(findDoublers("Hello"));
+// console.log(findDoublers("Nodemon"));
+// console.log(findDoublers("qwerty"));
 
 
 

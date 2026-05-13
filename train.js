@@ -1,31 +1,36 @@
 console.log("train ishga tushdi");
 
 
-function getHighestIndex(arr){
-   let max = arr[0]
-   for(let i = 1; i < arr.length; i++){
-      if(max < arr[i]){
-         max = arr[i]
-      }
-   }
-
-   console.log(`Max value is ${max}`)
-   return arr.indexOf(max)
-   //return max
+function getPositive(arr) {
+   let result = arr.filter((ele) => {
+   return ele > 0
+}).join(" ")
+   return result;
 }
 
-const arr1 = [5, 1521, 312, 21, 8999, 90, 2233]
-const result = getHighestIndex(arr1)
-console.log(result);
+arr1 = [-2, 3, 8, -9, 7, 6]
+console.log(getPositive(arr1))
 
 
 
+// function getHighestIndex(arr){
+   
+//    let max = arr[0];
+   
+//    for(let i = 1; i < arr.length; i++){
+//       if(max < arr[i]){
+//          max = arr[i]
+//       }
+//    }
 
+//    console.log(`Max value is ${max}`)
+//    return arr.indexOf(max)
+//    //return max
+// }
 
-
-
-
-
+// const x = [5, 1521, 9312, 21, 8999, 90, 2233]
+// const result = getHighestIndex(x)
+// console.log(result);
 
 
 

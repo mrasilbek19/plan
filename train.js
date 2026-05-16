@@ -1,15 +1,42 @@
 console.log("train ishga tushdi");
 
 
-function getPositive(arr) {
-   let result = arr.filter((ele) => {
-   return ele > 0
-}).join(" ")
-   return result;
+function majorityElement(arr) {
+    let maxElement = 0;
+    let result = arr[0];
+    for (let i = 0; i < arr.length; i++) {
+        let count = 0;
+        for (let j = 0; j < arr.length; j++) {
+            if (arr[i] === arr[j]) {
+                count++;
+            }
+        }
+        if (count > maxElement) {
+            maxElement = count;
+            result = arr[i];
+        }
+    }
+
+    return result;
 }
 
-arr1 = [-2, 3, 8, -9, 7, 6]
-console.log(getPositive(arr1))
+const arr1 = [1, 2, 4, 3, 5, 4, 3, 4, 3, 3, 4]
+console.log(majorityElement(arr1)); 
+
+
+
+
+
+
+// function getPositive(arr) {
+//    let result = arr.filter((ele) => {
+//    return ele > 0
+// }).join(" ")
+//    return result;
+// }
+
+// arr1 = [-2, 3, 8, -9, 7, 6]
+// console.log(getPositive(arr1))
 
 
 

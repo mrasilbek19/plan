@@ -1,27 +1,47 @@
 console.log("train ishga tushdi");
 
 
-function majorityElement(arr) {
-    let maxElement = 0;
-    let result = arr[0];
-    for (let i = 0; i < arr.length; i++) {
-        let count = 0;
-        for (let j = 0; j < arr.length; j++) {
-            if (arr[i] === arr[j]) {
-                count++;
-            }
-        }
-        if (count > maxElement) {
-            maxElement = count;
-            result = arr[i];
+
+function findLongestWord(str){
+    const strarray = str.split(" ")
+    console.log(strarray)
+    let longest = strarray[0]
+    for(let i = 1; i < strarray.length; i++){
+        if(longest.length < strarray[i].length){
+            longest = strarray[i];
         }
     }
-
-    return result;
+    console.log(longest)
+    return longest;
 }
 
-const arr1 = [1, 2, 4, 3, 5, 4, 3, 4, 3, 3, 4]
-console.log(majorityElement(arr1)); 
+findLongestWord("I came from Uzbekistan! 111111111111111111111")
+console.log("-----------------------")
+findLongestWord("Python programming language ddddddddddddddddddddd")
+
+
+
+// function majorityElement(arr) {
+//     let maxElement = 0;
+//     let result = arr[0];
+//     for (let i = 0; i < arr.length; i++) {
+//         let count = 0;
+//         for (let j = 0; j < arr.length; j++) {
+//             if (arr[i] === arr[j]) {
+//                 count++;
+//             }
+//         }
+//         if (count > maxElement) {
+//             maxElement = count;
+//             result = arr[i];
+//         }
+//     }
+
+//     return result;
+// }
+
+// const arr1 = [1, 2, 4, 3, 5, 4, 3, 4, 3, 3, 4]
+// console.log(majorityElement(arr1)); 
 
 
 

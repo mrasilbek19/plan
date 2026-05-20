@@ -1,23 +1,38 @@
 console.log("train ishga tushdi");
 
-
-
-function findLongestWord(str){
-    const strarray = str.split(" ")
-    console.log(strarray)
-    let longest = strarray[0]
-    for(let i = 1; i < strarray.length; i++){
-        if(longest.length < strarray[i].length){
-            longest = strarray[i];
+function countVowels(str){
+    const vovels = "aeuio"
+    count = 0;
+    for(let letter of str){
+        if(vovels.includes(letter)){
+            count++;
         }
     }
-    console.log(longest)
-    return longest;
+    return count;
 }
 
-findLongestWord("I came from Uzbekistan! 111111111111111111111")
-console.log("-----------------------")
-findLongestWord("Python programming language ddddddddddddddddddddd")
+const a = countVowels("hello");
+console.log(a)
+
+
+
+
+// function findLongestWord(str){
+//     const strarray = str.split(" ")
+//     console.log(strarray)
+//     let longest = strarray[0]
+//     for(let i = 1; i < strarray.length; i++){
+//         if(longest.length < strarray[i].length){
+//             longest = strarray[i];
+//         }
+//     }
+//     console.log(longest)
+//     return longest;
+// }
+
+// findLongestWord("I came from Uzbekistan! 111111111111111111111")
+// console.log("-----------------------")
+// findLongestWord("Python programming language ddddddddddddddddddddd")
 
 
 

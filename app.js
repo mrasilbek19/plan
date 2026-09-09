@@ -44,9 +44,9 @@ app.post("/delete-all",
     reqController.deleteAll
 )
 
-app.get("/author", (req, res) => {
-    res.render("author", { user: user });
-});
+app.get("/author",
+    reqController.getAuthor
+);
 
 app.get("/",
     reqController.getItems

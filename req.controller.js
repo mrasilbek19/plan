@@ -41,6 +41,10 @@ reqController.deleteAll = (req, res) => {
     }
 }
 
+reqController.getAuthor = (req, res) => {
+    res.render("author", { user: user });
+}
+
 reqController.getItems = function (req, res) {
     console.log("user entered to /")
     db.collection("plans").find().toArray((err, data) => {
